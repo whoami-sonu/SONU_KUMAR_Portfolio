@@ -1,0 +1,184 @@
+/* ==========================================
+   TERMINAL
+========================================== */
+
+.terminal {
+  width: 100%;
+  max-width: 520px;
+
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 40px rgba(229, 9, 20, 0.15);
+
+  transition: 0.35s;
+}
+
+.terminal:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 0 60px rgba(229,9,20,.35);
+
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.terminal-header{
+
+display:flex;
+
+align-items:center;
+
+padding:18px 22px;
+
+background:#151515;
+
+border-bottom:1px solid #262626;
+
+}
+
+.red,
+.yellow,
+.green{
+
+width:13px;
+
+height:13px;
+
+border-radius:50%;
+
+margin-right:8px;
+
+}
+
+.red{
+
+background:#ff5f56;
+
+}
+
+.yellow{
+
+background:#ffbd2f;
+
+}
+
+.green{
+
+background:#27c93f;
+
+}
+
+.terminal-title{
+
+margin-left:14px;
+
+color:#9ca3af;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+/* ==========================================
+BODY
+========================================== */
+
+.terminal-content{
+
+padding:28px;
+
+font-family:
+"SFMono-Regular",
+Menlo,
+Monaco,
+Consolas,
+monospace;
+
+font-size:16px;
+
+line-height:2;
+
+color:#ffffff;
+
+}
+
+.terminal-content p{
+
+margin:0;
+
+}
+
+.terminal-output{
+
+color:#00ff88;
+
+font-weight:600;
+
+margin-left:16px;
+
+}
+
+.online{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:6px 12px;
+
+background:rgba(0,255,136,.08);
+
+border:1px solid rgba(0,255,136,.4);
+
+border-radius:30px;
+
+color:#00ff88;
+
+font-weight:700;
+
+}
+
+/* ==========================================
+BLINK CURSOR
+========================================== */
+
+.cursor{
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.terminal{
+
+max-width:100%;
+
+}
+
+}

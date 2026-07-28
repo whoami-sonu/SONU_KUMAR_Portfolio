@@ -1,0 +1,502 @@
+@import "./variables.css";
+@import "./reset.css";
+@import "./background.css";
+@import "./hero.css";
+@import "./terminal.css";
+@import "./dashboard.css";
+@import "./skills.css";
+@import "./tools.css";
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,
+  "Segoe UI",Roboto,sans-serif;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:min(1400px,92%);
+  margin-inline:auto;
+}
+
+section{
+  position:relative;
+  padding:110px 0;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+::selection{
+  background:#E50914;
+  color:#fff;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:82px;
+  z-index:9999;
+
+  background:rgba(8,8,8,.85);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  transition:.35s;
+}
+
+.nav-container{
+
+  height:82px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.logo{
+
+  font-size:34px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  color:#fff;
+
+  transition:.35s;
+
+}
+
+.logo:hover{
+
+  transform:scale(1.03);
+
+}
+
+.logo span{
+
+  color:#E50914;
+
+}
+
+.nav-menu{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:28px;
+
+}
+
+.nav-menu a{
+
+  position:relative;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  transition:.35s;
+
+}
+
+.nav-menu a:hover{
+
+  transform:translateY(-2px);
+
+  text-shadow:0 0 12px currentColor;
+
+}
+
+.nav-menu a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:-8px;
+
+  width:0;
+
+  height:2px;
+
+  background:currentColor;
+
+  transition:.35s;
+
+}
+
+.nav-menu a:hover::after{
+
+  width:100%;
+
+}
+
+.hire-btn{
+
+  padding:12px 28px;
+
+  border-radius:14px;
+
+  background:linear-gradient(
+      135deg,
+      #E50914,
+      #ff404a
+  );
+
+  color:#fff;
+
+  font-weight:700;
+
+  transition:.35s;
+
+  box-shadow:0 10px 25px rgba(229,9,20,.25);
+
+}
+
+.hire-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 0 30px rgba(229,9,20,.45);
+
+}
+
+/* ==========================================
+   NAVIGATION COLORS
+========================================== */
+
+.nav-home{
+  color:#ff3b30;
+}
+
+.nav-about{
+  color:#0ea5e9;
+}
+
+.nav-skills{
+  color:#22c55e;
+}
+
+.nav-tools{
+  color:#f59e0b;
+}
+
+.nav-projects{
+  color:#8b5cf6;
+}
+
+.nav-thm{
+  color:#88cc14;
+}
+
+.nav-github{
+  color:#ffffff;
+}
+
+.nav-htb{
+  color:#9fef00;
+}
+
+.nav-cert{
+  color:#06b6d4;
+}
+
+.nav-contact{
+  color:#ec4899;
+}
+
+/* ==========================================
+   COMMON UTILITIES
+========================================== */
+
+.section-title{
+  text-align:center;
+  font-size:48px;
+  font-weight:800;
+  color:#fff;
+  margin-bottom:18px;
+}
+
+.section-title span{
+  color:#E50914;
+}
+
+.section-subtitle{
+  max-width:700px;
+  margin:0 auto 70px;
+  text-align:center;
+  color:#9ca3af;
+  line-height:1.8;
+  font-size:17px;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.red{
+  color:#E50914;
+}
+
+.green{
+  color:#22c55e;
+}
+
+.blue{
+  color:#0ea5e9;
+}
+
+.orange{
+  color:#f59e0b;
+}
+
+.purple{
+  color:#8b5cf6;
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass-card{
+  background:rgba(15,15,15,.82);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:18px;
+}
+
+.shadow-red{
+  box-shadow:0 0 35px rgba(229,9,20,.22);
+}
+
+.shadow-green{
+  box-shadow:0 0 35px rgba(34,197,94,.18);
+}
+
+.shadow-blue{
+  box-shadow:0 0 35px rgba(14,165,233,.18);
+}
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.dashboard-card,
+.skill-card,
+.tool-card{
+  transition:.35s ease;
+}
+
+.dashboard-card:hover,
+.skill-card:hover,
+.tool-card:hover{
+  transform:translateY(-8px);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#090909;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#E50914;
+  border-radius:50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#ff404a;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.fade-up{
+  animation:fadeUp .8s ease forwards;
+}
+
+.fade-left{
+  animation:fadeLeft .8s ease forwards;
+}
+
+.fade-right{
+  animation:fadeRight .8s ease forwards;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes fadeLeft{
+
+  from{
+    opacity:0;
+    transform:translateX(-40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+@keyframes fadeRight{
+
+  from{
+    opacity:0;
+    transform:translateX(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1200px){
+
+  .nav-menu{
+    gap:18px;
+  }
+
+}
+
+@media (max-width:992px){
+
+  .nav-menu{
+    display:none;
+  }
+
+  .hire-btn{
+    padding:10px 20px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  section{
+    padding:90px 0;
+  }
+
+  .logo{
+    font-size:28px;
+  }
+
+  .navbar{
+    height:72px;
+  }
+
+  .nav-container{
+    height:72px;
+  }
+
+  .section-title{
+    font-size:36px;
+  }
+
+  .section-subtitle{
+    font-size:16px;
+    margin-bottom:50px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .container{
+    width:94%;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+
+  .hire-btn{
+    padding:10px 18px;
+    font-size:14px;
+  }
+
+}
+
+/* ==========================================
+   END
+========================================== */

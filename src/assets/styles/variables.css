@@ -1,0 +1,21 @@
+:root{
+
+--color-bg:#050505;
+--color-surface:#111111;
+--color-primary:#E50914;
+--color-secondary:#ff3b3b;
+
+--color-text:#ffffff;
+--color-text-muted:#9ca3af;
+
+--color-border:#262626;
+
+--container:1280px;
+
+--radius:18px;
+
+--transition:.3s ease;
+
+--shadow-red:0 0 35px rgba(229,9,20,.25);
+
+}

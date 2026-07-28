@@ -1,0 +1,266 @@
+/* ==========================================
+   HACK THE BOX
+========================================== */
+
+.hackthebox{
+    padding:120px 0;
+    background:
+        radial-gradient(circle at right,
+        rgba(159,239,0,.08),
+        transparent 40%),
+        #050505;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.htb-card{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+    padding:50px;
+
+    background:rgba(17,17,17,.85);
+
+    border:1px solid #222;
+
+    border-radius:24px;
+
+    backdrop-filter:blur(12px);
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.htb-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(159,239,0,.06),
+        transparent
+    );
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.5s;
+}
+
+.htb-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#9FEF00;
+
+    box-shadow:
+        0 0 40px rgba(159,239,0,.22);
+}
+
+.htb-card:hover::before{
+
+    opacity:1;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.htb-logo{
+
+    width:170px;
+    height:170px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#121212;
+
+    border:2px solid rgba(159,239,0,.4);
+
+    font-size:82px;
+
+    color:#9FEF00;
+
+    box-shadow:
+        0 0 35px rgba(159,239,0,.25);
+
+    transition:.35s;
+
+    z-index:2;
+}
+
+.htb-card:hover .htb-logo{
+
+    transform:rotate(8deg) scale(1.05);
+
+    box-shadow:
+        0 0 60px rgba(159,239,0,.45);
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.htb-content{
+
+    flex:1;
+
+    position:relative;
+
+    z-index:5;
+}
+
+.htb-content h3{
+
+    color:#fff;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+}
+
+.htb-content p{
+
+    color:#a1a1aa;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+}
+
+/* ==========================================
+   TAGS
+========================================== */
+
+.htb-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:35px;
+}
+
+.htb-tags span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#171717;
+
+    border:1px solid #2c2c2c;
+
+    color:#e5e5e5;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.htb-tags span:hover{
+
+    border-color:#9FEF00;
+
+    color:#9FEF00;
+
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.htb-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 30px;
+
+    background:#9FEF00;
+
+    color:#111;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    z-index:20;
+
+    transition:.35s;
+}
+
+.htb-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 30px rgba(159,239,0,.45);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.htb-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:35px;
+}
+
+.htb-tags{
+
+    justify-content:center;
+}
+
+.htb-logo{
+
+    width:140px;
+    height:140px;
+
+    font-size:70px;
+}
+
+.htb-content h3{
+
+    font-size:30px;
+}
+
+}

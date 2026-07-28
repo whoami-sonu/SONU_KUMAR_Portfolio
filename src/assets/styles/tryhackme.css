@@ -1,0 +1,95 @@
+.tryhackme{
+    padding:120px 0;
+    background:#050505;
+}
+
+.thm-card{
+    display:flex;
+    align-items:center;
+    gap:50px;
+
+    background:#101010;
+    border:1px solid #222;
+    border-radius:20px;
+
+    padding:45px;
+
+    transition:.35s;
+}
+
+.thm-card:hover{
+    transform:translateY(-8px);
+    border-color:#E50914;
+    box-shadow:0 0 35px rgba(229,9,20,.2);
+}
+
+.thm-logo{
+    font-size:90px;
+    color:#E50914;
+}
+
+.thm-content{
+    flex:1;
+}
+
+.thm-content h3{
+    color:#fff;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.thm-content p{
+    color:#9ca3af;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.thm-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.thm-tags span{
+    padding:8px 16px;
+    background:#191919;
+    color:#fff;
+    border-radius:999px;
+    font-size:13px;
+}
+
+.thm-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:15px 28px;
+
+    background:#E50914;
+    color:#fff;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.thm-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 30px rgba(229,9,20,.4);
+}
+
+@media(max-width:900px){
+
+.thm-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.thm-tags{
+    justify-content:center;
+}
+
+}

@@ -1,0 +1,40 @@
+.tools {
+  padding: 120px 0;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.tool-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 18px;
+  padding: 25px;
+  transition: .3s;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  border-color: #E50914;
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tool-progress {
+  height: 8px;
+  background: #222;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.tool-progress-fill {
+  height: 100%;
+}

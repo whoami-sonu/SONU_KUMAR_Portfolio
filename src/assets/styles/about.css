@@ -1,0 +1,119 @@
+.about{
+
+    padding:120px 0;
+
+    background:#080808;
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-card{
+
+    background:#101010;
+
+    border:1px solid #222;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    transition:.35s;
+}
+
+.about-card:hover{
+
+    border-color:#E50914;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 35px rgba(229,9,20,.18);
+}
+
+.about-icon{
+
+    color:#E50914;
+
+    font-size:50px;
+
+    margin-bottom:25px;
+}
+
+.about-card h3{
+
+    color:#fff;
+
+    margin-bottom:20px;
+}
+
+.about-card p{
+
+    color:#9ca3af;
+
+    line-height:1.9;
+}
+
+.info-card{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    background:#111;
+
+    border:1px solid #222;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+}
+
+.info-card:hover{
+
+    border-color:#E50914;
+
+    transform:translateX(10px);
+}
+
+.info-card svg{
+
+    font-size:30px;
+
+    color:#E50914;
+}
+
+.info-card h4{
+
+    color:#fff;
+
+    margin-bottom:6px;
+}
+
+.info-card p{
+
+    color:#9ca3af;
+}
+
+@media(max-width:1000px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

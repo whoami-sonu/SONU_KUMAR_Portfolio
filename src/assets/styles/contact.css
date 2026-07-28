@@ -1,0 +1,273 @@
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact {
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at right,
+      rgba(229, 9, 20, 0.08),
+      transparent 40%),
+    #050505;
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.contact .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact .section-title span {
+  color: #E50914;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.contact .section-title h2 {
+  color: #fff;
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.contact .section-title p {
+  color: #9ca3af;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ==========================================
+   LEFT SIDE
+========================================== */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 18px;
+
+  transition: .35s;
+}
+
+.contact-card:hover {
+  transform: translateX(8px);
+  border-color: #E50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, .25);
+}
+
+.contact-card svg {
+  font-size: 28px;
+  color: #E50914;
+  min-width: 30px;
+}
+
+.contact-card h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.contact-card p,
+.contact-card a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: .3s;
+  word-break: break-word;
+}
+
+.contact-card a:hover {
+  color: #E50914;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.contact-form {
+  width: 100%;
+  min-height: 100%;
+
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 22px;
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 18px;
+
+  background: #181818;
+
+  border: 1px solid #2c2c2c;
+  border-radius: 12px;
+
+  color: #fff;
+  font-size: 16px;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #E50914;
+  box-shadow: 0 0 15px rgba(229, 9, 20, .2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 180px;
+  flex: 1;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.contact-form button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px;
+
+  background: #E50914;
+  color: #fff;
+
+  border: none;
+  border-radius: 14px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .35s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-4px);
+
+  background: #ff1f2f;
+
+  box-shadow: 0 0 30px rgba(229, 9, 20, .45);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .contact {
+    padding: 90px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-info {
+    order: 2;
+  }
+
+  .contact-form {
+    order: 1;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact .section-title h2 {
+    font-size: 34px;
+  }
+
+  .contact .section-title p {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,148 @@
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard {
+  padding: 120px 0;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.dashboard-card {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(229, 9, 20, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.35s;
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+  border-color: #e50914;
+  box-shadow:
+    0 0 35px rgba(229, 9, 20, 0.25),
+    0 0 80px rgba(229, 9, 20, 0.08);
+}
+
+.dashboard-card h3 {
+  color: #e50914;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card p {
+  color: #cfcfcf;
+  margin: 10px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===========================
+   GITHUB
+=========================== */
+
+.github-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid #e50914;
+}
+
+.github {
+  border-top: 4px solid #ffffff;
+}
+
+/* ===========================
+   TRYHACKME
+=========================== */
+
+.thm {
+  border-top: 4px solid #88cc14;
+}
+
+/* ===========================
+   HACK THE BOX
+=========================== */
+
+.htb {
+  border-top: 4px solid #9fef00;
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.dashboard-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.dashboard-link:hover {
+  color: #fff;
+  transform: translateX(6px);
+}
+
+.dashboard-card hr {
+  border: none;
+  height: 1px;
+  background: #262626;
+  margin: 20px 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+}
