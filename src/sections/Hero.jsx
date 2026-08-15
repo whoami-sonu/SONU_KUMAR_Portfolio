@@ -108,7 +108,7 @@ function Hero() {
           <div className="profile-card">
 
             <img
-              src="/images/sonu.jpg"
+              src="/sonu2.jpeg"
               alt="Sonu Kumar"
               className="profile-img"
             />
